@@ -3,6 +3,8 @@ name: SimpleCommand
 main: com.dave.simplecommand.Main
 description: Some Simple Command
 commands:
-  heal:
+  Hello:
+    aliases: [hi, helllo]
     description: good test command!
+  config:
     
