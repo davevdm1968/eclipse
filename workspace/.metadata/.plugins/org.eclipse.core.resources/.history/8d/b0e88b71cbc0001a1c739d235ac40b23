@@ -1,0 +1,91 @@
+package someName.dave.java;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		
+		try {
+			
+		} catch (Exception e) {
+			
+		}
+		
+		try {
+			
+		} catch (NullPointerException e) {
+			
+		}
+		String raw = "hello12345";
+		try {
+			int testraw = Integer.parseInt(raw);
+			System.out.println("Success!!");
+		} catch (NumberFormatException e) {
+			System.out.println("Failed!!!!");
+		}
+		
+
+		String 	test1 = "My string";
+		int		test2 = 5000;
+		double	test3 = 10.4;
+		char	test4 = 'M';
+		boolean	test5 = false;
+		
+		test2 = test2 + 5;
+		
+		switch(test2) {
+		case 1:
+			System.out.println("test2 is 1");
+			break;
+		case 5:
+			System.out.println("test2 is 5");
+			break;
+		case 10000:
+			System.out.println("test2 is 10000");
+			break;
+		//
+		default:
+			System.out.println("test2 is unknown");
+				break;
+		}
+		
+		
+		if (test2 > test3) {
+			System.out.println("test2 is gt 3");
+		} else {
+			System.out.println("test2 is lt 3");
+		}
+		
+		if (test2 == test3) {
+			System.out.println("Are equal");
+		} else if (test2 != test3) {
+			System.out.println("is not equal ");
+		}
+		
+		if (test5) {
+			System.out.println("Is True");
+		} else {
+			System.out.println("Is False");
+		}
+		
+		System.out.println(getMessage() );
+		
+		//sendMessage("The code is running!!!", 25);
+		
+		SecondClass second = new SecondClass();
+		second.sayHello();
+		
+	}
+	
+	public static int number0 = 0; 
+	
+	public static String getMessage() {
+		String message = "Banana";
+		
+		return message;
+	}
+	
+	public static void sendMessage() {
+		System.out.println("sendMessage!!");
+	}
+	
+}

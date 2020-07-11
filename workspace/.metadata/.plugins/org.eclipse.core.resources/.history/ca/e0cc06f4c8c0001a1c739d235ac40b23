@@ -1,0 +1,52 @@
+package someName.dave.java;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		
+		try {
+			
+		} catch (Exception e) {
+			
+		}
+		
+		try {
+			
+		} catch (NullPointerException e) {
+			
+		}
+		String raw = "hello12345";
+		try {
+			int testraw = Integer.parseInt(raw);
+			System.out.println("Success!!");
+		} catch (NumberFormatException e) {
+			System.out.println("Failed!!!!");
+		}
+		
+
+		String 	test1 = "My string";
+		int		test2 = 5000;
+		double	test3 = 10.4;
+		char	test4 = 'M';
+		boolean	test5 = false;
+		
+		System.out.println(getMessage() );
+		
+		//sendMessage("The code is running!!!", 25);
+		
+		SecondClass second = new SecondClass();
+		second.sayHello();
+		
+	}
+	
+	public static String getMessage() {
+		String message = "Banana";
+		
+		return message;
+	}
+	
+	public static void sendMessage() {
+		System.out.println("sendMessage!!");
+	}
+	
+}

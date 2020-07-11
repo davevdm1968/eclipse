@@ -1,0 +1,74 @@
+package com.dave.simplecommand;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerEggThrowEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import net.md_5.bungee.api.ChatColor;
+
+public class Main extends JavaPlugin implements Listener {
+	
+	@Override
+	public void onEnable() {
+		System.out.println("Simple Command plugin is enabled!!!!");
+		
+		Bukkit.getPluginManager().registerEvents(this, this);
+		
+		
+	}
+	
+	@Override
+	public void onDisable() {
+		System.out.println("Simple Command plugin is DISabled!!!!");
+	}
+	
+	@EventHandler
+	public void onMove(PlayerMoveEvent e) {
+		Player player = e.getPlayer();
+		
+		if (!player.hasPermission("simplecommand.allowmove")) {
+			
+			e.setCancelled(true);
+			
+		}
+		
+		
+	}
+	
+	@EventHandler
+	public void onThrow(PlayerEggThrowEvent e) {
+		Player player = e.getPlayer();
+		
+		player.sendMessage(ChatColor.DARK_RED +  player.getName() + ChatColor.GRAY + " Has thown egg!!!!!");
+		
+		
+	}
+	
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		// Hello	
+		if (cmd.getName().equals("Hello")) {
+			if (sender instanceof Player ) {
+				Player player = (Player) sender;
+				player.sendMessage(ChatColor.DARK_RED + "Hello" + ChatColor.GREEN + player.getName() + ChatColor.GRAY + " your health has been restored.");
+				player.setHealth(20.0);
+				
+			} else {
+				System.out.println("This command is not accessable via console!!!!");
+			}
+				
+		}
+		
+		
+		// onCommand
+		return false;
+	}
+
+	
+}

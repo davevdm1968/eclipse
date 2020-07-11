@@ -1,0 +1,14 @@
+package someName.dave.java;
+
+public class SecondClass {
+
+	
+	public SecondClass() {
+		System.out.println("Hello!!!!");
+	}
+	
+	public void sayHello() {
+		System.out.println("sayHello!!!!! ");
+	}
+
+}

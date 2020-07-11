@@ -1,0 +1,26 @@
+package someName.dave.java;
+
+public class Animal {
+	
+	private int legs;
+	private String colour;
+	private boolean canSwim;
+	
+	public Animal(int legs, String colour, boolean canSwim) {
+		this.legs = legs;
+		this.colour = colour;
+		this.canSwim = canSwim;
+		
+		
+		
+	}
+	
+	public int getLegs() { return this.legs; }
+	public String getColour() { return this.colour; }
+	public boolean getSwim() { return this.canSwim; }
+	
+	public void sendConsoleMessage() {
+		System.out.println("The animal has " + legs + " legs, its colour is " + colour + " and its water status is " + canSwim);
+	}
+
+}
