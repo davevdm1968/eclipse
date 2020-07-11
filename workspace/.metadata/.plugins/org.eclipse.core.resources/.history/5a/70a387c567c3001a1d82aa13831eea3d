@@ -5,3 +5,4 @@ description: Some Simple Command
 commands:
   heal:
     description: good test command!
+    
